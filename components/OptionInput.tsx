@@ -57,6 +57,10 @@ const OptionInput: React.FC<OptionInputProps> = ({ options, setOptions, isSpinni
     }));
   }, [setOptions]);
 
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    e.target.select();
+  };
+
   const totalWeight = options.reduce((sum, opt) => sum + (Number(opt.weight) || 0), 0);
 
   return (
@@ -101,6 +105,7 @@ const OptionInput: React.FC<OptionInputProps> = ({ options, setOptions, isSpinni
                   type="text"
                   value={option.text}
                   onChange={(e) => updateOption(option.id, 'text', e.target.value)}
+                  onFocus={handleFocus}
                   placeholder={`선택지 ${index + 1}`}
                   disabled={isSpinning}
                   className="w-full bg-slate-900/80 text-white border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 outline-none text-sm transition-all"
@@ -112,6 +117,7 @@ const OptionInput: React.FC<OptionInputProps> = ({ options, setOptions, isSpinni
                   min="0"
                   value={option.weight}
                   onChange={(e) => updateOption(option.id, 'weight', Math.max(0, Number(e.target.value)))}
+                  onFocus={handleFocus}
                   disabled={isSpinning}
                   className="w-full bg-slate-900/80 text-right text-white border border-slate-600 rounded-lg px-2 py-2 focus:ring-2 focus:ring-blue-500 outline-none text-sm font-mono"
                 />
