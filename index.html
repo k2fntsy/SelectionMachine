@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    
+    <!-- SEO & Metadata -->
+    <title>운명론적 대리결정 룰렛</title>
+    <meta name="description" content="점심 메뉴, 내기 벌칙 등 결정하기 어려운 순간! 가중치 조절이 가능한 운명의 슬롯머신에 맡겨보세요." />
+    <meta name="keywords" content="랜덤 추첨, 룰렛, 슬롯머신, 결정 앱, 점심 메뉴 추천, 제비뽑기" />
+    <meta name="author" content="운명론적 대리결정 룰렛" />
+
+    <!-- Open Graph / Facebook / KakaoTalk -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lucky-decide.vercel.app/" />
+    <meta property="og:title" content="운명론적 대리결정 룰렛" />
+    <meta property="og:description" content="고민은 그만! 당신을 위한 선택을 대신 해드립니다." />
+    <meta property="og:image" content="https://ui-avatars.com/api/?name=Lucky+Decide&background=0F172A&color=FACC15&size=512" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="운명론적 대리결정 룰렛" />
+    <meta property="twitter:description" content="고민은 그만! 당신을 위한 선택을 대신 해드립니다." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+
+      /* Animations */
+      @keyframes flyOut {
+        0% { transform: scale(1) translateX(0) rotate(0deg); opacity: 1; }
+        20% { transform: scale(1.1) translateX(-10px) rotate(-5deg); opacity: 1; }
+        100% { transform: scale(0.5) translateX(200px) rotate(45deg); opacity: 0; }
+      }
+      .animate-fly-out {
+        animation: flyOut 0.5s ease-in forwards;
+      }
+      
+      @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-2px) rotate(-1deg); }
+        75% { transform: translateX(2px) rotate(1deg); }
+      }
+      .animate-shake {
+        animation: shake 0.2s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
